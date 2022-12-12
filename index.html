@@ -4,26 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Mulish:wght@700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>International Hi-Tech center</title>
 </head>
 <body>
-    <div class="nav-bar">
-        <img src="./images/logo.webp" alt="Logotip" class="logo">
-        <h1></h1>
-        <div class="central-container">
-            <div class="phone"></div>
-                <img src="" alt="Phone icon" class="">
-                <p></p>
+    <section class="first-screen">
+        <div class="nav-bar">
+            <img src="./images/logo.webp" alt="Logotip" class="logo">
+            <div class="central-container">
+                <div class="phone">
+                    <img src="" alt="Phone icon" class="">
+                    <p></p>
+                </div>
+                <div class="email">
+                    <img src="" alt="Email icon" class="">
+                    <p></p>
+                </div>
             </div>
-            <div class="email"></div>
-                <img src="" alt="Email icon" class="">
-                <p></p>
-            </div>
-            <div class="left-container">
+            <div class="right-container">
                 <!--Language button-->
                 <svg width="56" height="31" viewBox="0 0 56 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M54.3529 10.7691V6.46133H52.7059V4.30721H51.0587V2.15368H47.7648V0H8.23531V2.15368H4.94107V4.30721H3.29401V6.46133H1.64684V10.7691H0V19.3847H1.64684V23.6918H3.29401V25.8453H4.94107V27.9996H8.23531V30.1538H47.7648V27.9996H51.0587V25.8453H52.7059V23.6918H54.3529V19.3847H56V10.7691H54.3529Z" fill="black"/>
@@ -33,25 +34,23 @@
                     <path d="M52.7066 8.6156H51.0596V12.9228H52.7066V8.6156Z" fill="white"/>
                     <path d="M51.0589 6.46133H49.4121V8.6156H51.0589V6.46133Z" fill="white"/>
                     <path d="M20.008 20V10.13H24.488C25.5987 10.13 26.4573 10.396 27.064 10.928C27.6707 11.4507 27.974 12.1833 27.974 13.126C27.974 13.742 27.834 14.274 27.554 14.722C27.2833 15.1607 26.8913 15.5013 26.378 15.744C25.874 15.9773 25.2673 16.094 24.558 16.094L24.726 15.786H25.3C25.7013 15.786 26.056 15.8933 26.364 16.108C26.6813 16.3227 26.9427 16.6353 27.148 17.046L28.618 20H26.21L24.684 16.822C24.572 16.5513 24.3947 16.374 24.152 16.29C23.9187 16.1967 23.648 16.15 23.34 16.15H22.192V20H20.008ZM22.192 14.582H24.11C24.6793 14.582 25.1133 14.4653 25.412 14.232C25.7107 13.9987 25.86 13.6533 25.86 13.196C25.86 12.7387 25.7107 12.398 25.412 12.174C25.1133 11.9407 24.6793 11.824 24.11 11.824H22.192V14.582ZM34.1621 20.154C32.7154 20.154 31.6374 19.7947 30.9281 19.076C30.2188 18.3573 29.8641 17.2887 29.8641 15.87V10.13H32.0481V15.884C32.0481 16.6773 32.2161 17.2793 32.5521 17.69C32.8974 18.1007 33.4341 18.306 34.1621 18.306C34.8714 18.306 35.3988 18.1007 35.7441 17.69C36.0988 17.2793 36.2761 16.6773 36.2761 15.884V10.13H38.4321V15.87C38.4321 17.2887 38.0728 18.3573 37.3541 19.076C36.6448 19.7947 35.5808 20.154 34.1621 20.154Z" fill="white"/>
+                </svg>   
+                <svg id="burger-button" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 28.3333V24.5555H34V28.3333H0ZM0 18.8889V15.1111H34V18.8889H0ZM0 9.44443V5.66666H34V9.44443H0Z" fill="#6E50AB"/>
                 </svg>
-    
-                <div class="burger-button"></div>
+            </div>
+            <!--Buger menu for mobile-->
+            <div class="burger-menu">
+                <div class="phone-container">
+                    <img src="" alt="Phone icon">
+                    <p>+371 20202020</p>
+                </div>
+                <div class="email-container">
+                    <img src="" alt="">
+                    <p>info@ihc.lv</p>
+                </div>
             </div>
         </div>
-        <!--Buger menu for mobile-->
-        <div class="burger-menu">
-            <div class="phone-container">
-                <img src="" alt="Phone icon">
-                <p>+371 20202020</p>
-            </div>
-            <div class="email-container">
-                <img src="" alt="">
-                <p>info@ihc.lv</p>
-            </div>
-            
-        </div>
-    </div>
-    <section class="first-screen">
         <h1>Развивающие занятия для детей на платформе</h1>
         <h2>Minecraft Education</h2>
         <div class="container">
@@ -66,7 +65,7 @@
                     <path d="M4.71582 9.43307V11.7907H7.07412V14.1486H9.43226V16.5074H11.7906V9.43307H4.71582Z" fill="#00A9B8"/>
                     <path d="M11.791 9.43307V18.8652H14.1492V16.5074H16.507V14.1486H18.8653V11.7907H21.2234V9.43307H11.791Z" fill="#00C9C9"/>
                 </svg>
-                <p>Для школьников 7 - 13 лет</p>
+                <p class="first">Для школьников 7 - 13 лет</p>
             </div>
             <div class="subcontainer">
                 <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -91,7 +90,7 @@
                     <path d="M13.7999 6.35726H12.2666V7.89048H13.7999V6.35726Z" fill="white"/>
                     <path d="M15.3331 7.89049H13.7998V9.42414H15.3331V7.89049Z" fill="white"/>
                 </svg>
-                <p>Занятия с педагогом, не в записи</p>
+                <p class="second">Занятия с педагогом, не в записи</p>
             </div>
             <div class="subcontainer">
                 <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -113,7 +112,7 @@
                     <path d="M20.6822 4.13665H18.6143V10.3413H20.6822V4.13665Z" fill="#FF0000"/>
                     <path d="M18.6148 4.13665H16.5469V6.20533H18.6148V4.13665Z" fill="white"/>
                 </svg>
-                <p>Занятия онлайн - из любой точки мира</p>
+                <p class="third">Занятия онлайн - из любой точки мира</p>
             </div>
             <div class="subcontainer">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -144,7 +143,7 @@
                     <path d="M17.1816 7.15923H15.75V8.59136H17.1816V7.15923Z" fill="white"/>
                     <path d="M18.6133 8.59137H17.1816V11.4552H18.6133V8.59137Z" fill="white"/>
                 </svg>
-                <p>1 раз в неделю, чтобы не перегружать детей</p>
+                <p class="fourth">1 раз в неделю, чтобы не перегружать детей</p>
             </div>
         </div>
     </section>
@@ -154,7 +153,7 @@
             <p>Если ребенку не понравится, можете не продолжать. Вы ничем не рискуете!</p>
             <input type="text" placeholder="Имя ребёнка">
             <input type="number" placeholder="Возраст ребёнка">
-            <select name="date" id="date" required>
+            <select name="date" id="date" required>    
                 <option value="default">Выберите дату</option>
                 <option value="15">15 января</option>
                 <option value="16">16 января</option>
@@ -162,8 +161,10 @@
                 <option value="18">18 января</option>
             </select>
             <button type="submit">Записать</button>
-            <input type="checkbox" name="checkbox" id="checkbox" required>
-            <label>Соглашаюсь на обработку персональных данных</label>
+            <div class="checkbox-container">
+                <div type="checkbox" name="checkbox" id="checkbox" required></div>
+                <p>Соглашаюсь на обработку персональных данных</p>
+            </div>
         </form>
     </section>
     <section class="minecraft">

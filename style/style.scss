@@ -42,13 +42,157 @@ h1, h2, h3, h4, h5, h6 {font-size: inherit; font-weight: 400;}
 $main-font: 'Montserrat';
 $minecraft-font: 'Press Start 2P';
 $second-font: 'Mulish';
+$text-color: #340c86;
+$placeholder-color: #504C58;
+$background-gradient: linear-gradient(24.01deg, #FFFFFF 21.38%, #EFFAFF 88.06%, #B3DBEC 133.53%);
+$background-color: #FAFAFA;
+$background-shadow: 0px 4px 4px rgba(16, 7, 36, 0.3);
 
+/* General styles */
+h1, h2, h3, h4, h5, h6, p {font-family: $main-font;}
+input, select {background: rgba(52, 12, 134, 0.1); border-radius: 60px; color: $placeholder-color; padding: 0 30px;};
+button {background: linear-gradient(90.77deg, #3E5ABE -5.89%, #6840BF 100%), #8E64E6; box-shadow: 0px 5px 0px #4C2997; border-radius: 60px; color: white; font-family: $second-font; font-weight: 800;}
 
-/* */
+/* Main styles */
+body {
+
+}
+
 .first-screen {
+    display: flex;
+    flex-wrap: wrap;
+    background: $background-gradient;
+    justify-content: center;
+    padding: 20px 15px 0 15px;
+
+    .nav-bar {
+        display: flex;
+        width: 100%;
+        height: 77px;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    
+        #burger-button {
+            margin-left: 40px;
+        }
+    
+        .burger-menu {
+            display: none;
+        }
+    
+        .central-container {
+            display: none;
+        }
+    }
+
     h1 {
-        font-family: $main-font;
         font-weight: 700;
         font-size: 28px;
+        line-height: 131%;
+        text-align: center;
+        width: 90%;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-family: $minecraft-font;
+        font-size: 18px;
+        color: $text-color;
+        margin-bottom: 30px;
+    }
+
+    .container {
+        padding-bottom: 40px;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 24px;
+
+            svg {
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 139%;
+                text-align: center;
+            }
+    
+            .first {
+                width: 150px;
+            }
+    
+            .second {
+                width: 200px;
+            }
+    
+            .third {
+                width: 300px;
+            }
+
+            .fourth {
+                width: 200px;
+            }
+        }
+
+        div:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.form-section {
+    background: $background-color;
+    box-shadow: $background-shadow;
+    padding: 38px 15px 0 15px;
+
+    form {
+
+        h2 {
+            font-weight: 700;
+            font-size: 23px;
+            line-height: 135%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 135%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        input, select {
+            width: 345px;
+            height: 60px;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        select {
+            margin-bottom: 20px;
+            appearance: none;
+            background-image: url('/images/select-arrow.svg');
+            background-repeat: no-repeat;
+            background-position: 310px 50%;
+        }
+
+        button {
+            width: 345px;
+            height: 60px;
+            font-size: 18px;
+            margin-bottom: 26px;
+        }
+
+        #checkbox {
+            width: 20px;
+            height: 20px;
+            background-image: url('/images/checkbox.svg');
+        }
     }
 }
