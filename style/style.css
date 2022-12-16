@@ -17,6 +17,10 @@ a:focus, a:active {
   outline: none;
 }
 
+a, a:visited {
+  color: black;
+}
+
 nav, footer, header, aside {
   display: block;
 }
@@ -30,10 +34,6 @@ html, body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-}
-
-input, button, textarea {
-  font-family: Montserrat;
 }
 
 input::-ms-clear {
@@ -68,14 +68,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Styles variables */
 /* General styles */
-h1, h2, h3, h4, h5, h6, p {
-  font-family: "Montserrat";
+h1, h2, h3, h4, h5, h6, p, input, button, textarea, ul, a {
+  font-family: "Montserrat", sans-serif;
 }
 
 input, select {
   background: rgba(52, 12, 134, 0.1);
   border-radius: 60px;
-  color: #504C58;
+  color: #504C58, sans-serif;
   padding: 0 30px;
 }
 
@@ -84,11 +84,34 @@ button {
   box-shadow: 0px 5px 0px #4C2997;
   border-radius: 60px;
   color: white;
-  font-family: "Mulish";
+  font-family: "Mulish", sans-serif;
   font-weight: 800;
 }
 
 /* Main styles */
+button {
+  width: 345px;
+  height: 60px;
+  font-size: 18px;
+}
+
+.checkbox-container {
+  display: flex;
+}
+.checkbox-container #checkbox {
+  width: 20px;
+  height: 20px;
+  background-image: url("/images/checkbox.svg");
+  margin-right: 15px;
+}
+.checkbox-container .agree {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 135%;
+  text-align: left;
+  margin-bottom: 0;
+}
+
 .first-screen {
   display: flex;
   flex-wrap: wrap;
@@ -122,7 +145,7 @@ button {
   margin-bottom: 15px;
 }
 .first-screen h2 {
-  font-family: "Press Start 2P";
+  font-family: "Press Start 2P", sans-serif;
   font-size: 18px;
   color: #340C86;
   margin-bottom: 30px;
@@ -162,9 +185,17 @@ button {
 }
 
 .form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #FAFAFA;
   box-shadow: 0px 4px 4px rgba(16, 7, 36, 0.3);
-  padding: 38px 15px 0 15px;
+  padding: 38px 15px 41px 15px;
+}
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .form-section form h2 {
   font-weight: 700;
@@ -195,29 +226,14 @@ button {
   background-position: 310px 50%;
 }
 .form-section form button {
-  width: 345px;
-  height: 60px;
-  font-size: 18px;
   margin-bottom: 26px;
-}
-.form-section form .checkbox-container {
-  display: flex;
-}
-.form-section form .checkbox-container #checkbox {
-  width: 20px;
-  height: 20px;
-  background-image: url("/images/checkbox.svg");
-  margin-right: 15px;
-}
-.form-section form .checkbox-container p {
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 135%;
-  text-align: left;
 }
 
 .minecraft {
-  padding: 50px 15px 58px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 15px 0 15px;
 }
 .minecraft h2 {
   font-weight: 700;
@@ -301,8 +317,8 @@ button {
   margin: 0 15px 30px 15px;
 }
 .minecraft .non-card-container .character {
-  width: 100%;
-  background-image: url("/images/background.svg");
+  border-radius: 20px;
+  background: linear-gradient(84deg, rgba(38, 37, 53, 0.9) 36.56%, rgba(83, 71, 65, 0.9) 106.76%), url("/images/background.webp");
   background-repeat: no-repeat;
 }
 .minecraft .non-card-container .character img {
@@ -312,7 +328,10 @@ button {
 }
 
 .child-description {
-  padding: 0 35px 0 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 58px 35px 79px 35px;
 }
 .child-description h2 {
   font-weight: 700;
@@ -321,6 +340,7 @@ button {
   margin-bottom: 25px;
 }
 .child-description .card-container {
+  width: 305px;
   border-radius: 20px;
   font-weight: 600;
   font-size: 16px;
@@ -329,7 +349,7 @@ button {
   text-align: center;
 }
 .child-description .card-container p {
-  margin: 31px 16px 38px 16px;
+  padding: 31px 16px 38px 16px;
 }
 .child-description .first {
   background: #6243BA;
@@ -342,4 +362,307 @@ button {
 }
 .child-description .fourth {
   background: #346EC8;
+}
+.child-description .first, .child-description .second, .child-description .third {
+  margin-bottom: 20px;
+}
+
+.inc-courses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(93.39deg, rgba(2, 132, 38, 0.9) -17.42%, rgba(26, 48, 38, 0.9) 56.79%, rgba(25, 44, 38, 0.9) 107.21%), #D9D9D9;
+  position: relative;
+  padding: 90px 31.5px;
+}
+.inc-courses img {
+  position: absolute;
+}
+.inc-courses .big-cube1 {
+  top: -65px;
+  left: 5%;
+}
+.inc-courses h2 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 140%;
+  text-align: center;
+  color: white;
+  margin-bottom: 46px;
+}
+.inc-courses .card-container {
+  width: 312px;
+  height: 260px;
+  background: white;
+  box-shadow: -10px 10px 70px #263631;
+  border-radius: 20px;
+  padding: 36px 34px 28px 34px;
+  margin-bottom: 20px;
+}
+.inc-courses .card-container svg {
+  margin-bottom: 15px;
+}
+.inc-courses .card-container p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 180%;
+}
+.inc-courses .card-container:last-of-type {
+  margin-bottom: 0;
+}
+.inc-courses .big-cube2 {
+  right: 5%;
+  bottom: -50px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 15px 60px 15px;
+}
+.description h2 {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.description p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 200%;
+  margin-bottom: 20px;
+}
+.description p span {
+  font-weight: 600;
+}
+.description .bold {
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.description button {
+  margin-bottom: 40px;
+}
+
+.lesson-staff {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 17.5px 70px 17.5px;
+  background: linear-gradient(93.39deg, rgba(2, 132, 38, 0.9) -17.42%, rgba(26, 48, 38, 0.9) 56.79%, rgba(25, 44, 38, 0.9) 107.21%), #D9D9D9;
+}
+.lesson-staff h2 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 140%;
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.lesson-staff .card-container {
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  height: 502px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: -10px 30px 70px #263631;
+  margin-bottom: 20px;
+}
+.lesson-staff .card-container img {
+  border-radius: 20px 20px 0 0;
+}
+.lesson-staff .card-container .content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.lesson-staff .card-container .content h4 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+  margin: 35px 0 10px 0;
+}
+.lesson-staff .card-container .content .big {
+  margin-top: 25px;
+}
+.lesson-staff .card-container .content ul {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 180%;
+}
+.lesson-staff .card-container .content p {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 160%;
+  margin: 13px 18.5px 0 18.5px;
+  color: #6044BE;
+}
+
+.payment {
+  padding: 50px 15px 60px 15px;
+}
+.payment h2 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 140%;
+  margin-bottom: 10px;
+}
+.payment h3 {
+  font-weight: 600;
+}
+.payment .styled {
+  color: rgb(69, 119, 252);
+  margin-bottom: 20px;
+}
+.payment p, .payment h3 {
+  font-size: 15px;
+  line-height: 200%;
+}
+.payment p {
+  margin-bottom: 30px;
+}
+.payment button {
+  margin-bottom: 40px;
+}
+
+.valuable-skills {
+  padding: 50px 15px 150px 15px;
+  background: linear-gradient(24.01deg, #FFFFFF 21.38%, #EFFAFF 88.06%, #B3DBEC 133.53%);
+}
+.valuable-skills h2 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 140%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.valuable-skills h2 span {
+  color: #4577FC;
+}
+.valuable-skills p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 180%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.valuable-skills .card-container {
+  background: #FFFFFF;
+  box-shadow: -10px 30px 70px #E1EAEE;
+  border-radius: 20px;
+  padding: 35px 25px 40px 30px;
+  margin-bottom: 15px;
+}
+.valuable-skills .card-container img {
+  margin-bottom: 15px;
+}
+.valuable-skills .card-container h3 {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.valuable-skills .card-container p {
+  font-size: 15px;
+  line-height: 180%;
+  text-align: left;
+}
+
+.final {
+  background: linear-gradient(93.39deg, rgba(2, 132, 38, 0.9) -17.42%, rgba(26, 48, 38, 0.9) 56.79%, rgba(25, 44, 38, 0.9) 107.21%), #D9D9D9;
+  padding: 60px 15px 70px 15px;
+  color: white;
+  text-align: center;
+}
+.final h2 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 140%;
+  margin-bottom: 26px;
+}
+.final p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 200%;
+  margin-bottom: 30px;
+}
+.final p:nth-of-type(2) {
+  margin-bottom: 20px;
+}
+.final .styled {
+  margin-bottom: 51px;
+}
+.final form {
+  background: #FAFAFA;
+  border: 2px solid #643CBC;
+  box-shadow: 0px 4px 4px rgba(16, 7, 36, 0.3);
+  border-radius: 20px;
+  padding: 50px 13px 40px 13px;
+  color: black;
+}
+.final form h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 135%;
+  margin-bottom: 15px;
+}
+.final form p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 135%;
+  margin-bottom: 30px;
+}
+.final form input {
+  width: 319px;
+  height: 60px;
+  margin-bottom: 12px;
+}
+.final form select {
+  width: 319px;
+  height: 60px;
+  margin-bottom: 20px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("/images/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 285px 55%;
+}
+.final form button {
+  width: 319px;
+  margin-bottom: 32px;
+  background: linear-gradient(90.77deg, #3E5ABE -5.89%, #6840BF 100%), #8E64E6;
+  box-shadow: 0px 5px 0px #4C2997;
+}
+.final form p {
+  margin-bottom: 0;
+}
+.final form #checkbox {
+  box-sizing: content-box;
+}
+.final form .agree {
+  width: 275px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0 43px 0;
+}
+footer p, footer a {
+  font-weight: 500;
+  font-size: 15px;
+}
+footer a {
+  margin: 23px 0 23px 0;
+}
+footer div {
+  display: flex;
+}
+footer div svg {
+  margin-right: 10px;
+}
+footer div p, footer div a {
+  font-size: 14px;
 }/*# sourceMappingURL=style.css.map */
