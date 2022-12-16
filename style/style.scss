@@ -81,7 +81,7 @@ button {
 } 
 
 
-// Mobile 375px
+// Mobile M 375px
 
 .first-screen {
     display: flex;
@@ -168,27 +168,23 @@ button {
             margin-bottom: 0;
         }
     }
-}
-
-.form-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: $background-color;
-    box-shadow: $background-shadow;
-    padding: 38px 15px 41px 15px;
 
     form {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 38px 15px 41px 15px;
+        background: $background-color;
+        box-shadow: $background-shadow;
 
-        h2 {
+        .form-title {
+            font-family: 'Montserrat';
             font-weight: 700;
             font-size: 23px;
             line-height: 135%;
             text-align: center;
             margin-bottom: 20px;
+            color: #101218;
         }
 
         p {
@@ -767,5 +763,42 @@ footer {
         p, a {
             font-size: 14px;
         }
+    }
+}
+
+// Mobile L 480px
+
+@media all and (min-width: 480px) {
+    .first-screen {
+        justify-content: flex-start;
+
+        h1 {
+            text-align: left;
+        }
+
+        .container {
+            
+            .subcontainer {
+                flex-direction: row;
+
+                p {
+                    width: auto;
+                }
+
+                svg {
+                    margin: 0 21px 0 0;
+                }
+            }
+        }
+    }
+}
+
+.form-section {
+    box-shadow: none;
+
+    form {
+        border: 2px solid #643CBC;
+        border-radius: 20px;
+        padding: 52px 48px 43px 48px;
     }
 }

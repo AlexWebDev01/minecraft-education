@@ -183,40 +183,36 @@ button {
 .first-screen .container div:last-of-type {
   margin-bottom: 0;
 }
-
-.form-section {
+.first-screen form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 38px 15px 41px 15px;
   background: #FAFAFA;
   box-shadow: 0px 4px 4px rgba(16, 7, 36, 0.3);
-  padding: 38px 15px 41px 15px;
 }
-.form-section form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.form-section form h2 {
+.first-screen form .form-title {
+  font-family: "Montserrat";
   font-weight: 700;
   font-size: 23px;
   line-height: 135%;
   text-align: center;
   margin-bottom: 20px;
+  color: #101218;
 }
-.form-section form p {
+.first-screen form p {
   font-size: 16px;
   line-height: 135%;
   text-align: center;
   margin-bottom: 30px;
 }
-.form-section form input, .form-section form select {
+.first-screen form input, .first-screen form select {
   width: 345px;
   height: 60px;
   margin-bottom: 12px;
   font-size: 14px;
 }
-.form-section form select {
+.first-screen form select {
   margin-bottom: 20px;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -225,7 +221,7 @@ button {
   background-repeat: no-repeat;
   background-position: 310px 50%;
 }
-.form-section form button {
+.first-screen form button {
   margin-bottom: 26px;
 }
 
@@ -700,4 +696,30 @@ footer div svg {
 }
 footer div p, footer div a {
   font-size: 14px;
+}
+
+@media all and (min-width: 480px) {
+  .first-screen {
+    justify-content: flex-start;
+  }
+  .first-screen h1 {
+    text-align: left;
+  }
+  .first-screen .container .subcontainer {
+    flex-direction: row;
+  }
+  .first-screen .container .subcontainer p {
+    width: auto;
+  }
+  .first-screen .container .subcontainer svg {
+    margin: 0 21px 0 0;
+  }
+}
+.form-section {
+  box-shadow: none;
+}
+.form-section form {
+  border: 2px solid #643CBC;
+  border-radius: 20px;
+  padding: 52px 48px 43px 48px;
 }/*# sourceMappingURL=style.css.map */
