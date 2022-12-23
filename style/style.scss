@@ -67,7 +67,7 @@ button {
     #checkbox {
         width: 20px;
         height: 20px;
-        background-image: url('/images/checkbox.svg');
+        background-image: url('./images/checkbox.svg');
         margin-right: 15px;
     }
 
@@ -204,7 +204,7 @@ button {
         select {
             margin-bottom: 20px;
             appearance: none;
-            background-image: url('/images/select-arrow.svg');
+            background-image: url('./images/select-arrow.svg');
             background-repeat: no-repeat;
             background-position: 310px 50%;
         }
@@ -340,7 +340,7 @@ button {
             width: 345px;
             height: 356px;
             border-radius: 20px;
-            background: linear-gradient(84deg, rgba(38, 37, 53, 0.9) 36.56%, rgba(83, 71, 65, 0.9) 106.76%), url('/images/background.webp');
+            background: linear-gradient(84deg, rgba(38, 37, 53, 0.9) 36.56%, rgba(83, 71, 65, 0.9) 106.76%), url('./images/background.webp');
             background-repeat: no-repeat;
 
             img {
@@ -412,7 +412,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(-93.39deg, rgba(2, 132, 38, 0.9) -17.42%, rgba(26, 48, 38, 0.9) 56.79%, rgba(25, 44, 38, 0.9) 107.21%), url('/images/background1.webp');
+    background: linear-gradient(-93.39deg, rgba(2, 132, 38, 0.9) -17.42%, rgba(26, 48, 38, 0.9) 56.79%, rgba(25, 44, 38, 0.9) 107.21%), url('./images/background1.webp');
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     position: relative;
@@ -470,7 +470,7 @@ button {
         width: 100%;
         height: 225px;
         bottom: 0;
-        background: linear-gradient(-93.39deg, rgba(2, 132, 38, 0.9) -17.42%, rgba(26, 48, 38, 0.9) 56.79%, rgba(25, 44, 38, 0.9) 107.21%), url('/images/background2.webp');
+        background: linear-gradient(-93.39deg, rgba(2, 132, 38, 0.9) -17.42%, rgba(26, 48, 38, 0.9) 56.79%, rgba(25, 44, 38, 0.9) 107.21%), url('./images/background2.webp');
         background-blend-mode: multiply;
         z-index: 0;
     }
@@ -673,7 +673,7 @@ button {
 }
 
 .final {
-    background: linear-gradient(-90.84deg, rgba(2, 132, 38, 0.9) -5.82%, rgba(26, 48, 38, 0.9) 61.56%, rgba(25, 44, 38, 0.9) 107.34%), url('/images/background3.webp');
+    background: linear-gradient(-90.84deg, rgba(2, 132, 38, 0.9) -5.82%, rgba(26, 48, 38, 0.9) 61.56%, rgba(25, 44, 38, 0.9) 107.34%), url('./images/background3.webp');
     background-repeat: no-repeat;
     background-blend-mode: multiply;
     padding: 60px 15px 70px 15px;
@@ -744,7 +744,7 @@ button {
             height: 60px;
             margin-bottom: 20px;
             appearance: none;
-            background-image: url('/images/select-arrow.svg');
+            background-image: url('./images/select-arrow.svg');
             background-repeat: no-repeat;
             background-position: 285px 55%;
         }
@@ -771,7 +771,7 @@ button {
         height: 225px;
         left: 0;
         bottom: 0;
-        background: linear-gradient(-93.39deg, rgba(2, 132, 38, 0.9) -17.42%, rgba(26, 48, 38, 0.9) 56.79%, rgba(25, 44, 38, 0.9) 107.21%), url('/images/background4.webp');
+        background: linear-gradient(-93.39deg, rgba(2, 132, 38, 0.9) -17.42%, rgba(26, 48, 38, 0.9) 56.79%, rgba(25, 44, 38, 0.9) 107.21%), url('./images/background4.webp');
         background-blend-mode: multiply;
         z-index: 0;
     }
@@ -856,7 +856,7 @@ footer {
             width: 480px;
             height: 100%;
             position: absolute;
-            background: url('/images/first-screen-background.webp');
+            background: url('./images/first-screen-background.webp');
             left: 0;
             bottom: 0;
             z-index: 1;
@@ -931,7 +931,7 @@ footer {
         .character {
             width: 378px;
             height: 390px;
-            background: url('/images/background480.webp');
+            background: url('./images/background480.webp');
 
             img {
                 width: 335px;
