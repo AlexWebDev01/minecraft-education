@@ -48,7 +48,8 @@ $background-gradient: linear-gradient(24.01deg, #FFFFFF 21.38%, #EFFAFF 88.06%, 
 $background-color: #FAFAFA;
 $background-shadow: 0px 4px 4px rgba(16, 7, 36, 0.3);
 $card-background: linear-gradient(89.5deg, rgba(2, 132, 38, 0.9) -6.15%, rgba(26, 48, 38, 0.9) 75.04%, rgba(25, 44, 38, 0.9) 130.21%), linear-gradient(85.81deg, rgba(38, 37, 53, 0.252) 36.59%, rgba(83, 71, 65, 0.3) 90.24%);
-$section-background: linear-gradient(93.39deg, rgba(2, 132, 38, 0.9) -17.42%, rgba(26, 48, 38, 0.9) 56.79%, rgba(25, 44, 38, 0.9) 107.21%), #D9D9D9;
+$green-section: linear-gradient(93.39deg, rgba(2, 132, 38, 0.9) -17.42%, rgba(26, 48, 38, 0.9) 56.79%, rgba(25, 44, 38, 0.9) 107.21%), #D9D9D9;;
+$green-section-reversed: linear-gradient(93.39deg, rgba(2, 132, 38, 0.9) -17.42%, rgba(26, 48, 38, 0.9) 56.79%, rgba(25, 44, 38, 0.9) 107.21%), #D9D9D9;
 /* General styles */
 h1, h2, h3, h4, h5, h6, p, input, button, textarea, ul, a {font-family: $main-font, sans-serif;}
 input, select {background: rgba(52, 12, 134, 0.1); border-radius: 60px; color: $placeholder-color, sans-serif; padding: 0 30px;};
@@ -416,9 +417,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(-93.39deg, rgba(2, 132, 38, 0.9) -17.42%, rgba(26, 48, 38, 0.9) 56.79%, rgba(25, 44, 38, 0.9) 107.21%), url('../images/background1.webp');
-    background-blend-mode: multiply;
-    background-repeat: no-repeat;
+    background: $green-section;
     position: relative;
     padding: 90px 31.5px;
 
@@ -524,9 +523,7 @@ button {
     flex-direction: column;
     align-items: center;
     padding: 50px 17.5px 70px 17.5px;
-    background: linear-gradient(-90.84deg, rgba(2, 132, 38, 0.9) -5.82%, rgba(26, 48, 38, 0.9) 61.56%, rgba(25, 44, 38, 0.9) 107.34%), url(../images/cube-background3.webp);;
-    background-blend-mode: multiply;
-    background-repeat:no-repeat;
+    background: $green-section-reversed;
     position: relative;
 
     h2 {
