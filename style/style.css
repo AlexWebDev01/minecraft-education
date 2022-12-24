@@ -1048,4 +1048,269 @@ footer div p, footer div a {
   .first-screen form .checkbox-container p {
     width: 317px;
   }
+  .minecraft {
+    padding: 70px 24px 90px 24px;
+  }
+  .minecraft .card-container:first-of-type {
+    padding: 119px 108px 113px 91px;
+  }
+  .minecraft .card-container {
+    width: 719px;
+    height: 600px;
+    padding: 77px 109px 75px 91px;
+  }
+  .minecraft .card-container .styled {
+    font-size: 30px;
+    line-height: 160%;
+    margin: 0;
+  }
+  .minecraft .card-container h3 {
+    font-size: 28px;
+    line-height: 160%;
+    margin-bottom: 25px;
+  }
+  .minecraft .card-container p {
+    font-size: 18px;
+    line-height: 200%;
+  }
+  .minecraft .card-container .cube1 {
+    filter: blur(0);
+    width: 75px;
+    height: 75px;
+    top: 85px;
+    right: 80px;
+  }
+  .minecraft .card-container .cube2 {
+    filter: blur(0);
+    width: 100px;
+    height: 100px;
+    left: 100px;
+    top: 550px;
+  }
+  .minecraft .card-container .cube3 {
+    width: 114px;
+    height: 114px;
+    filter: blur(0);
+    transform: rotate(360deg);
+    top: -50px;
+  }
+  .minecraft .card-container .cube4 {
+    width: 89px;
+    height: 89px;
+    filter: blur(0);
+    transform: rotate(25deg);
+    left: 375px;
+    top: 545px;
+  }
+  .minecraft .non-card-container {
+    width: 720px;
+    flex-direction: row-reverse;
+    margin-bottom: 138px;
+  }
+  .minecraft .non-card-container .character {
+    width: 326px;
+    height: 390px;
+  }
+  .minecraft .non-card-container .character img {
+    left: 0px;
+  }
+  .child-description {
+    width: 635px;
+    margin: 0 auto;
+    padding: 72px 0 110px 0;
+  }
+  .child-description h2 {
+    font-size: 30px;
+    margin-bottom: 60px;
+  }
+  .child-description .card-container {
+    width: 305px;
+    height: 438px;
+  }
+  .child-description .card-container img {
+    width: 305px;
+    height: 317px;
+  }
+  .child-description .card-container p {
+    font-size: 16px;
+    line-height: 165%;
+    margin: 31px 16px 0 16px;
+  }
+  .child-description .card-container:last-of-type p {
+    margin: 31px 40px 0 40px;
+  }
+  .child-description .card-container:first-of-type, .child-description .card-container:nth-of-type(2) {
+    margin-bottom: 25px;
+  }
+  .inc-courses {
+    padding: 120px 0;
+  }
+  .inc-courses .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 642px;
+  }
+  .inc-courses .container h2 {
+    font-size: 35px;
+    line-height: 131%;
+    text-align: left;
+  }
+  .inc-courses .container .big-cube1 {
+    width: 100px;
+    height: 100px;
+    left: 79px;
+    top: -50px;
+  }
+  .inc-courses .container .big-cube2 {
+    width: 115px;
+    height: 115px;
+    right: 80px;
+  }
+  .description {
+    padding: 70px 24px 110px 24px;
+    align-items: flex-start;
+  }
+  .description h2 {
+    width: 382px;
+    font-size: 35px;
+    line-height: 130%;
+    margin: 0 auto 25px auto;
+  }
+  .description p:first-of-type {
+    width: 580px;
+  }
+  .description p:nth-of-type(2) {
+    width: 500px;
+  }
+  .description .bold {
+    width: 550px;
+  }
+  .description button {
+    margin: 0 auto 60px auto;
+  }
+  .description img {
+    width: 720px;
+    height: 733px;
+    margin: auto;
+  }
+  .lesson-staff {
+    padding: 100px 62px;
+  }
+  .lesson-staff .container {
+    width: 644px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .lesson-staff .container h2 {
+    font-size: 35px;
+    margin-bottom: 60px;
+    margin: 0 auto 60px auto;
+  }
+  .lesson-staff .container .card-container {
+    width: 312px;
+    height: 460px;
+  }
+  .lesson-staff .container .card-container img {
+    width: 312px;
+    height: 273px;
+  }
+  .payment {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 91px 24px 112px 24px;
+  }
+  .payment h2 {
+    font-size: 35px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  .payment h3, .payment .styled {
+    display: flex;
+    width: auto;
+    margin-bottom: 25px;
+  }
+  .payment .styled {
+    margin-left: 3px;
+  }
+  .payment p {
+    margin-bottom: 40px;
+  }
+  .payment h3, .payment .styled, .payment p {
+    font-size: 18px;
+    line-height: 200%;
+  }
+  .payment button {
+    margin: 0 auto 60px auto;
+  }
+  .payment img {
+    width: 720px;
+    height: 466px;
+    margin: 0 auto;
+  }
+  .valuable-skills {
+    padding: 70px 24px 90px 24px;
+  }
+  .valuable-skills .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 720px;
+  }
+  .valuable-skills .container h2 {
+    font-size: 35px;
+    line-height: 130%;
+  }
+  .valuable-skills .container p:first-of-type {
+    width: 660px;
+    font-size: 18px;
+    line-height: 180%;
+    margin: 0 auto 40px auto;
+  }
+  .valuable-skills .container .card-container {
+    width: 350px;
+    height: 266px;
+  }
+  .valuable-skills .container .card-container p {
+    width: auto;
+    font-size: 15px;
+    line-height: 180%;
+  }
+  .valuable-skills .container .card-container:nth-of-type(3), .valuable-skills .container .card-container:nth-of-type(4) {
+    height: 322px;
+  }
+  .valuable-skills .container .card-container:nth-of-type(5), .valuable-skills .container .card-container:nth-of-type(6) {
+    height: 349px;
+  }
+  .final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 24px 133px 24px;
+  }
+  .final h2 {
+    font-size: 35px;
+  }
+  .final p {
+    width: 720px;
+    font-size: 18px;
+    line-height: 200%;
+    margin-bottom: 26px;
+  }
+  .final .styled {
+    width: 474px;
+    margin-bottom: 69px;
+  }
+  .final form {
+    width: 566px;
+    height: 636px;
+    padding: 52px 101px 63px 101px;
+  }
+  .final form p {
+    width: 364px;
+  }
 }/*# sourceMappingURL=style.css.map */
