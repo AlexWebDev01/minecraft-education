@@ -374,6 +374,7 @@ button {
     }
 
     .card-container {
+        
         width: 305px;
         border-radius: 20px;
         font-weight: 600;
@@ -440,6 +441,7 @@ button {
     }
 
     .card-container {
+        position: relative;
         width: 312px;
         height: 260px;
         background: white;
@@ -526,6 +528,12 @@ button {
     background: $green-section-reversed;
     position: relative;
 
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+
     h2 {
         font-weight: 700;
         font-size: 22px;
@@ -538,6 +546,7 @@ button {
     .card-container {
         display: flex;
         flex-direction: column;
+        position: relative;
         width: 340px;
         height: 502px;
         border-radius: 20px;
@@ -935,6 +944,10 @@ footer {
             margin: 0 45px 30px 45px;
         }
 
+        h3 {
+            max-width: 350px;
+        }
+
         .character {
             width: 378px;
             height: 390px;
@@ -950,11 +963,13 @@ footer {
 }
 
 .child-description {
+    width: 480px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: normal;
     padding: 72px 15px 129px 15px;
+    margin: 0 auto;
 
     h2 {
         font-size: 24px;
@@ -1047,9 +1062,16 @@ footer {
         margin-bottom: 48px;
     }
 
-    .card-container {
-        width: 350px;
-        height: 349px;
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 580px;
+
+        .card-container {
+            width: 350px;
+            height: 349px;
+        }
     }
 }
 
