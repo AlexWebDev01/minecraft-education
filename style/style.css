@@ -1005,12 +1005,13 @@ footer div p, footer div a {
     width: 155px;
   }
   .first-screen h2:first-of-type {
-    max-width: 549px;
+    max-width: 539px;
     font-size: 40px;
     text-align: center;
     margin-bottom: 20px;
+    font-size: 40px;
   }
-  .first-screen h2:nth-last-of-type(2) {
+  .first-screen h2:nth-of-type(2) {
     font-size: 30px;
   }
   .first-screen .container {
@@ -1031,16 +1032,16 @@ footer div p, footer div a {
     font-size: 18px;
   }
   .first-screen .container .subcontainer .first {
-    width: 155px;
+    width: 181px;
   }
   .first-screen .container .subcontainer .second {
-    width: 200px;
+    width: 230px;
   }
   .first-screen .container .subcontainer .third {
-    width: 185px;
+    width: 222px;
   }
   .first-screen .container .subcontainer .fourth {
-    width: 210px;
+    width: 250px;
   }
   .first-screen form {
     display: flex;
