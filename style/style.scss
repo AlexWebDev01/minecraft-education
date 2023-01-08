@@ -50,6 +50,7 @@ $background-shadow: 0px 4px 4px rgba(16, 7, 36, 0.3);
 $card-background: linear-gradient(89.5deg, rgba(2, 132, 38, 0.9) -6.15%, rgba(26, 48, 38, 0.9) 75.04%, rgba(25, 44, 38, 0.9) 130.21%), linear-gradient(85.81deg, rgba(38, 37, 53, 0.252) 36.59%, rgba(83, 71, 65, 0.3) 90.24%);
 $green-section: linear-gradient(93.39deg, rgba(2, 132, 38, 0.9) -17.42%, rgba(26, 48, 38, 0.9) 56.79%, rgba(25, 44, 38, 0.9) 107.21%), #D9D9D9;;
 $green-section-reversed: linear-gradient(93.39deg, rgba(2, 132, 38, 0.9) -17.42%, rgba(26, 48, 38, 0.9) 56.79%, rgba(25, 44, 38, 0.9) 107.21%), #D9D9D9;
+
 /* General styles */
 h1, h2, h3, h4, h5, h6, p, input, button, textarea, ul, a {font-family: $main-font, sans-serif;}
 input, select {background: rgba(52, 12, 134, 0.1); border-radius: 60px; color: $placeholder-color, sans-serif; padding: 0 30px;};
@@ -113,6 +114,10 @@ button {
     }
 
     h1 {
+        display: none;
+    }
+
+    h2:first-of-type {
         font-weight: 700;
         font-size: 28px;
         line-height: 131%;
@@ -121,7 +126,7 @@ button {
         margin-bottom: 15px;
     }
 
-    h2 {
+    h2:last-of-type {
         font-family: $minecraft-font, sans-serif;
         font-size: 18px;
         color: $text-color;
@@ -212,6 +217,10 @@ button {
 
         button {
             margin-bottom: 26px;
+        }
+
+        .player-container {
+            display: none;
         }
     }
 
@@ -744,7 +753,7 @@ button {
         margin-top: 51px;
         z-index: 5;
 
-        h3 {
+        .h3 {
             font-weight: 700;
             font-size: 18px;
             line-height: 135%;
@@ -840,13 +849,13 @@ footer {
             z-index: 5;
         }
 
-        h1 {
+        h2:first-of-type {
             font-size: 30px;
             text-align: left;
             z-index: 5;
         }
 
-        h2 {
+        h2:last-of-type {
             font-size: 20;
             z-index: 5;
             margin-bottom: 35px;
@@ -1143,13 +1152,14 @@ footer {
             }
         }
 
-        h1 {
+        h2:first-of-type {
+            max-width: 549px;
             font-size: 40px;
             text-align: center;
             margin-bottom: 20px;
         }
 
-        h2 {
+        h2:nth-last-of-type(2) {
             font-size: 30px;
         }
 
@@ -1168,6 +1178,7 @@ footer {
                  
                 p {
                     text-align: left;
+                    font-size: 18px;
                 }
 
                 .first {
@@ -1196,7 +1207,7 @@ footer {
             padding: 50px 45px;
             width: 660px;
 
-            h2 {
+            .form-title {
                 margin-bottom: 15px;
             }
             p {
@@ -1209,6 +1220,7 @@ footer {
 
             select {
                 margin-bottom: 28px;
+                background-position: 250px 50%;
             }
 
             input:first-of-type {
@@ -1542,100 +1554,89 @@ footer {
 // Laptop 1024px
 @media (min-width: 1024px) {
     .first-screen {
-        padding: 24px 24px 0 24px;
-        justify-content: center;
 
         .background-image {
             
         }
         
         .nav-bar {
+            width: 976px;
+            justify-content: flex-start;
+            margin-bottom: 58px;
+
             #burger-button {
                 display: none;
             }
+
+            .logo {
+                margin-right: 17px;
+            }
+
+            h1 {
+                display: inline-block;
+                font-family: 'Mulish';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 156.5%;
+                margin-right: auto;
+            }
         
             .central-container {
-                width: 410px;
-                display: flex;
-                font-family: $second-font;
-                font-style: normal;
-                font-weight: 700;
-                font-size: 20px;
-                color: #14161B;
-                justify-content: space-between;
-
-                div {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                }
+                width: auto;
+                margin-right: 100px;
 
                 .phone {
-                    width: 195px;
-                }
-
-                .email {
-                    width: 155px;
+                    margin-right: 145px;
                 }
             }
         }
 
-        h1 {
-            font-size: 40px;
+        h2:first-of-type {
+            max-width: 673px;
+            font-size: 50px;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 8px;
         }
 
-        h2 {
-            font-size: 30px;
+        h2:nth-of-type(2) {
+            font-size: 39px;
+            line-height: 180%;
+            margin-bottom: 31px;
         }
 
         .container {
-            display: flex;
-            flex-flow: column wrap;
-            flex-direction: row;
-            width: 600px;
-            margin-left: 50px;
-            padding-bottom: 30px;
+            width: 765px;
+            padding: 0;
+            margin-bottom: 60px;
+            margin-left: 15px;
+
 
             .subcontainer {
-                display: flex;
-                flex: 50%;
-                align-items: flex-start;
-                 
-                p {
-                    text-align: left;
-                }
 
                 .first {
-                    width: 155px;
+                    width: 240px;
                 }
 
                 .second {
-                    width: 200px;
+                    width: 329px;
                 }
 
                 .third {
-                    width: 185px;
+                    width: 317px;
                 }
 
                 .fourth {
-                    width: 210px;
+                    width: 327px;
                 }
             }
         }
 
         form {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding: 50px 45px;
-            width: 660px;
+            padding: 50px 120px;
+            width: 810px;
+            margin-bottom: 67px;
 
-            h2 {
-                margin-bottom: 15px;
-            }
             p {
                 width: 450px;
                 margin: 0 auto 35px auto;
@@ -1661,8 +1662,30 @@ footer {
                     width: 317px;
                 }
             }
-        }
 
+            .player-container {
+                display: flex;
+                width: 0;
+                height: 0;
+
+                .player-1 {
+                    position: relative;
+                    width: 152px;
+                    height: 264px;
+                    top: -130px;
+                    left: -784px;
+                    z-index: 10;
+                }
+    
+                .player-2 {
+                    position: relative;
+                    width: 221px;
+                    height: 273px;
+                    top: -145px;
+                    right: 77px;
+                }
+            }
+        }
     }
 
     .minecraft {
