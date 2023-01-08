@@ -139,7 +139,12 @@ button {
 .first-screen h1 {
   display: none;
 }
-.first-screen h2:first-of-type {
+.first-screen .content-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.first-screen .content-container h2:first-of-type {
   font-weight: 700;
   font-size: 28px;
   line-height: 131%;
@@ -147,43 +152,43 @@ button {
   width: 90%;
   margin-bottom: 15px;
 }
-.first-screen h2:last-of-type {
+.first-screen .content-container h2:last-of-type {
   font-family: "Press Start 2P", sans-serif;
   font-size: 18px;
   color: #340C86;
   margin-bottom: 30px;
 }
-.first-screen .container {
+.first-screen .content-container .container {
   padding-bottom: 40px;
 }
-.first-screen .container div {
+.first-screen .content-container .container div {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 24px;
 }
-.first-screen .container div svg {
+.first-screen .content-container .container div svg {
   margin-bottom: 10px;
 }
-.first-screen .container div p {
+.first-screen .content-container .container div p {
   font-size: 16px;
   font-weight: 600;
   line-height: 139%;
   text-align: center;
 }
-.first-screen .container div .first {
+.first-screen .content-container .container div .first {
   width: 150px;
 }
-.first-screen .container div .second {
+.first-screen .content-container .container div .second {
   width: 200px;
 }
-.first-screen .container div .third {
+.first-screen .content-container .container div .third {
   width: 300px;
 }
-.first-screen .container div .fourth {
+.first-screen .content-container .container div .fourth {
   width: 200px;
 }
-.first-screen .container div:last-of-type {
+.first-screen .content-container .container div:last-of-type {
   margin-bottom: 0;
 }
 .first-screen form {
@@ -250,7 +255,7 @@ button {
 .minecraft .card-container {
   position: relative;
   border-radius: 20px;
-  background: linear-gradient(89.5deg, rgba(2, 132, 38, 0.9) -6.15%, rgba(26, 48, 38, 0.9) 75.04%, rgba(25, 44, 38, 0.9) 130.21%), linear-gradient(85.81deg, rgba(38, 37, 53, 0.252) 36.59%, rgba(83, 71, 65, 0.3) 90.24%);
+  background: linear-gradient(89.5deg, rgba(2, 132, 38, 0.9) -6.15%, rgba(26, 48, 38, 0.9) 75.04%, rgba(25, 44, 38, 0.9) 130.21%), linear-gradient(85.81deg, rgba(38, 37, 53, 0.252) 36.59%, rgba(83, 71, 65, 0.3) 90.24%), url("/images/minecraft-section-background.webp");
   padding: 40px 25px;
   color: white;
   margin-bottom: 38px;
@@ -313,8 +318,14 @@ button {
   right: 9%;
   top: 91%;
 }
+.minecraft .card-container .characters-group {
+  display: none;
+}
 .minecraft .card-container:last-of-type {
   margin-bottom: 0;
+}
+.minecraft .card-container:last-of-type .gamepad {
+  display: none;
 }
 .minecraft .non-card-container {
   display: flex;
@@ -365,7 +376,7 @@ button {
   text-align: center;
   margin-bottom: 25px;
 }
-.child-description .card-container {
+.child-description .content-container .card-container {
   width: 305px;
   border-radius: 20px;
   font-weight: 600;
@@ -374,26 +385,26 @@ button {
   color: white;
   text-align: center;
 }
-.child-description .card-container img {
+.child-description .content-container .card-container img {
   width: 305px;
   height: 317px;
 }
-.child-description .card-container p {
+.child-description .content-container .card-container p {
   padding: 31px 16px 38px 16px;
 }
-.child-description .first {
+.child-description .content-container .first {
   background: #6243BA;
 }
-.child-description .second {
+.child-description .content-container .second {
   background: #C7910F;
 }
-.child-description .third {
+.child-description .content-container .third {
   background: #A8771F;
 }
-.child-description .fourth {
+.child-description .content-container .fourth {
   background: #346EC8;
 }
-.child-description .first, .child-description .second, .child-description .third {
+.child-description .content-container .first, .child-description .content-container .second, .child-description .content-container .third {
   margin-bottom: 20px;
 }
 
@@ -765,27 +776,30 @@ footer div p, footer div a {
   .first-screen .nav-bar {
     z-index: 5;
   }
-  .first-screen h2:first-of-type {
+  .first-screen .content-container {
+    justify-content: flex-start;
+  }
+  .first-screen .content-container h2:first-of-type {
     font-size: 30px;
     text-align: left;
     z-index: 5;
   }
-  .first-screen h2:last-of-type {
+  .first-screen .content-container h2:last-of-type {
     font-size: 20;
     z-index: 5;
     margin-bottom: 35px;
   }
-  .first-screen .container {
+  .first-screen .content-container .container {
     z-index: 5;
   }
-  .first-screen .container .subcontainer {
+  .first-screen .content-container .container .subcontainer {
     flex-direction: row;
     margin-bottom: 20px;
   }
-  .first-screen .container .subcontainer p {
+  .first-screen .content-container .container .subcontainer p {
     width: auto;
   }
-  .first-screen .container .subcontainer svg {
+  .first-screen .content-container .container .subcontainer svg {
     margin: 0 21px 0 0;
   }
   .first-screen form {
@@ -864,34 +878,35 @@ footer div p, footer div a {
     height: 387px;
   }
   .child-description {
-    width: 480px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: normal;
+    width: auto;
     padding: 72px 15px 129px 15px;
-    margin: 0 auto;
   }
   .child-description h2 {
     font-size: 24px;
     margin: 0 auto 25px auto;
   }
-  .child-description .card-container {
+  .child-description .content-container {
+    display: flex;
+    width: 450px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .child-description .content-container .card-container {
     width: 218px;
     height: 347px;
     margin-bottom: 15px;
   }
-  .child-description .card-container img {
+  .child-description .content-container .card-container img {
     width: 218px;
     height: 238px;
   }
-  .child-description .card-container p {
+  .child-description .content-container .card-container p {
     font-size: 14px;
     line-height: 165%;
     padding: 0;
     margin: 20px auto 0 auto;
   }
-  .child-description .card-container:nth-child(4), .child-description .card-container:nth-child(5) {
+  .child-description .content-container .card-container:nth-child(4), .child-description .content-container .card-container:nth-child(5) {
     margin-bottom: 0;
   }
   .inc-courses h2 {
@@ -1004,17 +1019,20 @@ footer div p, footer div a {
   .first-screen .nav-bar .central-container .email {
     width: 155px;
   }
-  .first-screen h2:first-of-type {
+  .first-screen .content-container {
+    justify-content: center;
+  }
+  .first-screen .content-container h2:first-of-type {
     max-width: 539px;
     font-size: 40px;
     text-align: center;
     margin-bottom: 20px;
     font-size: 40px;
   }
-  .first-screen h2:nth-of-type(2) {
+  .first-screen .content-container h2:nth-of-type(2) {
     font-size: 30px;
   }
-  .first-screen .container {
+  .first-screen .content-container .container {
     display: flex;
     flex-flow: column wrap;
     flex-direction: row;
@@ -1022,26 +1040,26 @@ footer div p, footer div a {
     margin-left: 50px;
     padding-bottom: 30px;
   }
-  .first-screen .container .subcontainer {
+  .first-screen .content-container .container .subcontainer {
     display: flex;
     flex: 50%;
     align-items: flex-start;
   }
-  .first-screen .container .subcontainer p {
+  .first-screen .content-container .container .subcontainer p {
     text-align: left;
     font-size: 18px;
   }
-  .first-screen .container .subcontainer .first {
-    width: 181px;
+  .first-screen .content-container .container .subcontainer .first {
+    width: 178px;
   }
-  .first-screen .container .subcontainer .second {
+  .first-screen .content-container .container .subcontainer .second {
     width: 230px;
   }
-  .first-screen .container .subcontainer .third {
+  .first-screen .content-container .container .subcontainer .third {
     width: 222px;
   }
-  .first-screen .container .subcontainer .fourth {
-    width: 250px;
+  .first-screen .content-container .container .subcontainer .fourth {
+    width: 235px;
   }
   .first-screen form {
     display: flex;
@@ -1083,6 +1101,11 @@ footer div p, footer div a {
   .minecraft {
     padding: 70px 24px 90px 24px;
   }
+  .minecraft h2 {
+    font-size: 30px;
+    max-width: 450px;
+    line-height: 130%;
+  }
   .minecraft .card-container:first-of-type {
     padding: 119px 108px 113px 91px;
   }
@@ -1090,6 +1113,7 @@ footer div p, footer div a {
     width: 719px;
     height: 600px;
     padding: 77px 109px 75px 91px;
+    background-position-y: 30%;
   }
   .minecraft .card-container .styled {
     font-size: 30px;
@@ -1146,6 +1170,22 @@ footer div p, footer div a {
   .minecraft .non-card-container .character img {
     left: 0px;
   }
+  .minecraft .non-card-container .text {
+    margin-left: 53px;
+  }
+  .minecraft .non-card-container .text h3 {
+    width: 341px;
+    max-width: none;
+    font-size: 28px;
+    margin: 0 0 30px 0;
+  }
+  .minecraft .non-card-container .text h3 span {
+    margin: 0;
+  }
+  .minecraft .non-card-container .text p {
+    font-size: 18px;
+    margin: 0;
+  }
   .child-description {
     width: 635px;
     margin: 0 auto;
@@ -1155,23 +1195,26 @@ footer div p, footer div a {
     font-size: 30px;
     margin-bottom: 60px;
   }
-  .child-description .card-container {
+  .child-description .content-container {
+    width: 635px;
+  }
+  .child-description .content-container .card-container {
     width: 305px;
     height: 438px;
   }
-  .child-description .card-container img {
+  .child-description .content-container .card-container img {
     width: 305px;
     height: 317px;
   }
-  .child-description .card-container p {
+  .child-description .content-container .card-container p {
     font-size: 16px;
     line-height: 165%;
     margin: 31px 16px 0 16px;
   }
-  .child-description .card-container:last-of-type p {
+  .child-description .content-container .card-container:last-of-type p {
     margin: 31px 40px 0 40px;
   }
-  .child-description .card-container:first-of-type, .child-description .card-container:nth-of-type(2) {
+  .child-description .content-container .card-container:first-of-type, .child-description .content-container .card-container:nth-of-type(2) {
     margin-bottom: 25px;
   }
   .inc-courses {
@@ -1204,22 +1247,28 @@ footer div p, footer div a {
     padding: 70px 24px 110px 24px;
     align-items: flex-start;
   }
-  .description h2 {
+  .description .content-container h2 {
     width: 382px;
     font-size: 35px;
     line-height: 130%;
     margin: 0 auto 25px auto;
   }
-  .description p:first-of-type {
+  .description .content-container p:first-of-type {
     width: 580px;
+    font-size: 18px;
+    line-height: 200%;
   }
-  .description p:nth-of-type(2) {
+  .description .content-container p:nth-of-type(2) {
     width: 500px;
+    font-size: 18px;
+    line-height: 200%;
   }
-  .description .bold {
+  .description .content-container .bold {
     width: 550px;
+    font-size: 18px;
+    line-height: 200%;
   }
-  .description button {
+  .description .content-container button {
     margin: 0 auto 60px auto;
   }
   .description img {
@@ -1325,16 +1374,21 @@ footer div p, footer div a {
     align-items: center;
     padding: 100px 24px 133px 24px;
   }
-  .final h2 {
+  .final .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .final .content-container h2 {
     font-size: 35px;
   }
-  .final p {
+  .final .content-container p {
     width: 720px;
     font-size: 18px;
     line-height: 200%;
     margin-bottom: 26px;
   }
-  .final .styled {
+  .final .content-container .styled {
     width: 474px;
     margin-bottom: 69px;
   }
@@ -1348,6 +1402,10 @@ footer div p, footer div a {
   }
 }
 @media (min-width: 1024px) {
+  .first-screen {
+    flex-direction: column;
+    align-items: center;
+  }
   .first-screen .nav-bar {
     width: 976px;
     justify-content: flex-start;
@@ -1375,33 +1433,36 @@ footer div p, footer div a {
   .first-screen .nav-bar .central-container .phone {
     margin-right: 145px;
   }
-  .first-screen h2:first-of-type {
+  .first-screen .content-container {
+    width: 765px;
+  }
+  .first-screen .content-container h2:first-of-type {
     max-width: 673px;
     font-size: 50px;
     text-align: center;
     margin-bottom: 8px;
   }
-  .first-screen h2:nth-of-type(2) {
+  .first-screen .content-container h2:nth-of-type(2) {
     font-size: 39px;
     line-height: 180%;
     margin-bottom: 31px;
   }
-  .first-screen .container {
+  .first-screen .content-container .container {
     width: 765px;
     padding: 0;
     margin-bottom: 60px;
     margin-left: 15px;
   }
-  .first-screen .container .subcontainer .first {
-    width: 240px;
+  .first-screen .content-container .container .subcontainer .first {
+    width: 251px;
   }
-  .first-screen .container .subcontainer .second {
+  .first-screen .content-container .container .subcontainer .second {
     width: 329px;
   }
-  .first-screen .container .subcontainer .third {
+  .first-screen .content-container .container .subcontainer .third {
     width: 317px;
   }
-  .first-screen .container .subcontainer .fourth {
+  .first-screen .content-container .container .subcontainer .fourth {
     width: 327px;
   }
   .first-screen form {
@@ -1452,13 +1513,41 @@ footer div p, footer div a {
     right: 77px;
   }
   .minecraft {
-    padding: 70px 24px 90px 24px;
+    padding: 70px 24px 120px 24px;
+  }
+  .minecraft h2 {
+    width: 810px;
+    max-width: none;
+    font-size: 35px;
   }
   .minecraft .card-container:first-of-type {
-    padding: 119px 108px 113px 91px;
+    display: flex;
+    padding-top: 113px;
+    padding-left: 61px;
+    padding-right: 0;
+    margin-bottom: 168px;
+  }
+  .minecraft .card-container:first-of-type .content-container h3, .minecraft .card-container:first-of-type .content-container p {
+    width: 520px;
+  }
+  .minecraft .card-container:first-of-type .image-container {
+    position: relative;
+    width: 721px;
+    height: 487px;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  .minecraft .card-container:first-of-type .image-container .characters-group {
+    display: block;
+    width: 721px;
+    height: 511px;
+    position: relative;
+    top: -23px;
+    right: 15px;
   }
   .minecraft .card-container {
-    width: 719px;
+    max-width: 1530px;
+    width: 100%;
     height: 600px;
     padding: 77px 109px 75px 91px;
   }
@@ -1478,17 +1567,17 @@ footer div p, footer div a {
   }
   .minecraft .card-container .cube1 {
     filter: blur(0);
-    width: 75px;
-    height: 75px;
-    top: 85px;
-    right: 80px;
+    width: 85px;
+    height: 85px;
+    top: 25px;
+    left: 620px;
   }
   .minecraft .card-container .cube2 {
     filter: blur(0);
-    width: 100px;
-    height: 100px;
-    left: 100px;
-    top: 550px;
+    width: 120px;
+    height: 120px;
+    left: 35px;
+    top: 538px;
   }
   .minecraft .card-container .cube3 {
     width: 114px;
@@ -1505,113 +1594,175 @@ footer div p, footer div a {
     left: 375px;
     top: 545px;
   }
+  .minecraft .card-container:last-of-type {
+    display: flex;
+    padding-right: 0;
+  }
+  .minecraft .card-container:last-of-type .content-container {
+    max-width: 520px;
+  }
+  .minecraft .card-container:last-of-type .image-container {
+    width: auto;
+    height: 396px;
+    overflow: hidden;
+  }
+  .minecraft .card-container:last-of-type .image-container .gamepad {
+    position: relative;
+    display: block;
+    width: 614px;
+    height: 396px;
+    left: -68px;
+  }
   .minecraft .non-card-container {
-    width: 720px;
-    flex-direction: row-reverse;
-    margin-bottom: 138px;
+    max-width: 1530px;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 157px;
   }
   .minecraft .non-card-container .character {
-    width: 326px;
+    min-width: 478px;
+    width: 478px;
     height: 390px;
   }
   .minecraft .non-card-container .character img {
-    left: 0px;
+    width: 365px;
+    height: 421px;
+    top: -15px;
+  }
+  .minecraft .non-card-container .text {
+    max-width: 520px;
+    width: auto;
+    margin-left: 49px;
+  }
+  .minecraft .non-card-container .text h3 {
+    width: auto;
   }
   .child-description {
-    width: 635px;
-    margin: 0 auto;
-    padding: 72px 0 110px 0;
+    width: 100%;
+    flex-direction: column;
+    padding: 0 0 160px 0;
   }
   .child-description h2 {
-    font-size: 30px;
-    margin-bottom: 60px;
+    display: block;
+    font-size: 35px;
   }
-  .child-description .card-container {
-    width: 305px;
-    height: 438px;
+  .child-description .content-container {
+    flex-direction: row;
+    width: 976px;
   }
-  .child-description .card-container img {
-    width: 305px;
-    height: 317px;
+  .child-description .content-container .card-container {
+    width: 229px;
+    height: 347px;
   }
-  .child-description .card-container p {
-    font-size: 16px;
+  .child-description .content-container .card-container img {
+    width: 229px;
+    height: 238px;
+  }
+  .child-description .content-container .card-container p {
+    font-weight: 600;
+    font-size: 14px;
     line-height: 165%;
-    margin: 31px 16px 0 16px;
+    margin-top: 20px;
   }
-  .child-description .card-container:last-of-type p {
+  .child-description .content-container .card-container:last-of-type p {
     margin: 31px 40px 0 40px;
   }
-  .child-description .card-container:first-of-type, .child-description .card-container:nth-of-type(2) {
+  .child-description .content-container .card-container:first-of-type, .child-description .content-container .card-container:nth-of-type(2) {
     margin-bottom: 25px;
   }
+  .child-description .content-container .card-container:nth-child(3) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    order: 1;
+  }
+  .child-description .content-container .card-container:last-of-type p {
+    width: 187px;
+    margin: 20px auto 0 auto;
+  }
   .inc-courses {
-    padding: 120px 0;
+    padding: 140px 0;
+    background: linear-gradient(to left, rgba(2, 132, 38, 0.9) -5.82%, rgba(26, 48, 38, 0.9) 61.56%, rgba(25, 44, 38, 0.9) 107.34%), #D9D9D9;
+  }
+  .inc-courses .arrow {
+    position: absolute;
+    z-index: 10;
+    top: 265px;
+    left: 200px;
   }
   .inc-courses .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 642px;
+    width: 100%;
+    max-width: 976px;
   }
   .inc-courses .container h2 {
-    font-size: 35px;
-    line-height: 131%;
-    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 312px;
   }
-  .inc-courses .container .big-cube1 {
+  .inc-courses .big-cube1 {
     width: 100px;
     height: 100px;
-    left: 79px;
+    left: 179px;
     top: -50px;
   }
-  .inc-courses .container .big-cube2 {
+  .inc-courses .big-cube2 {
     width: 115px;
     height: 115px;
     right: 80px;
   }
   .description {
-    padding: 70px 24px 110px 24px;
-    align-items: flex-start;
+    padding: 147px 24px 154px 24px;
+    flex-direction: row;
+    justify-content: center;
   }
-  .description h2 {
+  .description .content-container {
+    width: 520px;
+    margin-right: 41px;
+  }
+  .description .content-container h2 {
     width: 382px;
     font-size: 35px;
     line-height: 130%;
-    margin: 0 auto 25px auto;
+    margin: 0 0 25px 0;
   }
-  .description p:first-of-type {
-    width: 580px;
+  .description .content-container p:first-of-type {
+    width: auto;
   }
-  .description p:nth-of-type(2) {
+  .description .content-container p:nth-of-type(2) {
     width: 500px;
   }
-  .description .bold {
-    width: 550px;
+  .description .content-container .bold {
+    width: auto;
+    margin-bottom: 35px;
   }
-  .description button {
-    margin: 0 auto 60px auto;
+  .description .content-container button {
+    margin: 0 auto;
   }
-  .description img {
+  .description .image-container {
+    width: auto;
+    height: 710px;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  .description .image-container img {
     width: 720px;
     height: 733px;
     margin: auto;
   }
   .lesson-staff {
-    padding: 100px 62px;
+    padding: 100px 62px 140px 62px;
   }
   .lesson-staff .container {
-    width: 644px;
+    width: 976px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
   .lesson-staff .container h2 {
+    width: 100%;
     font-size: 35px;
-    margin-bottom: 60px;
-    margin: 0 auto 60px auto;
+    margin: 0 auto 75px auto;
   }
   .lesson-staff .container .card-container {
     width: 312px;
@@ -1621,100 +1772,144 @@ footer div p, footer div a {
     width: 312px;
     height: 273px;
   }
+  .lesson-staff .big-cube1 {
+    position: absolute;
+    top: -80px;
+    left: 164px;
+  }
+  .lesson-staff .big-cube2 {
+    position: absolute;
+    left: 763px;
+    top: 790px;
+    z-index: 10;
+    transform: rotate(30deg);
+  }
   .payment {
     flex-direction: row;
-    flex-wrap: wrap;
-    padding: 91px 24px 112px 24px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 91px 24px 130px 24px;
   }
-  .payment h2 {
+  .payment .content-container {
+    width: 396px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+  }
+  .payment .content-container h2 {
     font-size: 35px;
     margin-bottom: 25px;
     text-align: center;
   }
-  .payment h3, .payment .styled {
+  .payment .content-container h3, .payment .content-container .styled {
     display: flex;
     width: auto;
     margin-bottom: 25px;
   }
-  .payment .styled {
+  .payment .content-container .styled {
     margin-left: 8px;
   }
-  .payment p {
+  .payment .content-container p {
     margin-bottom: 40px;
   }
-  .payment h3, .payment .styled, .payment p {
+  .payment .content-container h3, .payment .content-container .styled, .payment .content-container p {
     font-size: 18px;
     line-height: 200%;
   }
-  .payment button {
+  .payment .content-container button {
     margin: 0 auto 60px auto;
   }
   .payment img {
-    width: 720px;
+    width: 479px;
     height: 466px;
-    margin: 0 auto;
+    margin: 0;
   }
   .valuable-skills {
-    padding: 70px 24px 90px 24px;
+    padding: 100px 95px 156px 95px;
   }
   .valuable-skills .container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 720px;
-    max-width: none;
+    width: 834px;
   }
   .valuable-skills .container h2 {
     font-size: 35px;
     line-height: 130%;
+    margin: 0 auto 25px auto;
   }
   .valuable-skills .container p:first-of-type {
     width: 660px;
     font-size: 18px;
     line-height: 180%;
-    margin: 0 auto 40px auto;
+    margin-bottom: 70px;
   }
   .valuable-skills .container .card-container {
-    width: 350px;
-    height: 266px;
+    width: 407px;
+    height: 261px;
   }
   .valuable-skills .container .card-container p {
     width: auto;
     font-size: 15px;
     line-height: 180%;
   }
-  .valuable-skills .container .card-container:nth-of-type(3), .valuable-skills .container .card-container:nth-of-type(4) {
-    height: 322px;
-  }
-  .valuable-skills .container .card-container:nth-of-type(5), .valuable-skills .container .card-container:nth-of-type(6) {
-    height: 349px;
+  .valuable-skills .container .card-container:nth-of-type(3), .valuable-skills .container .card-container:nth-of-type(4), .valuable-skills .container .card-container:nth-of-type(5), .valuable-skills .container .card-container:nth-of-type(6) {
+    height: 317px;
   }
   .final {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
     padding: 100px 24px 133px 24px;
   }
-  .final h2 {
-    font-size: 35px;
+  .final .content-container {
+    width: 474px;
+    align-items: flex-start;
+    margin-right: 42px;
+    z-index: 10;
   }
-  .final p {
-    width: 720px;
-    font-size: 18px;
-    line-height: 200%;
-    margin-bottom: 26px;
+  .final .content-container h2 {
+    margin-bottom: 25px;
+    text-align: start;
   }
-  .final .styled {
+  .final .content-container p {
+    width: auto;
+    text-align: start;
+  }
+  .final .content-container .styled {
     width: 474px;
     margin-bottom: 69px;
   }
   .final form {
-    width: 566px;
+    width: 460px;
     height: 636px;
-    padding: 52px 101px 63px 101px;
+    padding: 52px 53px 63px 53px;
+    margin: 0;
+  }
+  .final form h3 {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 135%;
   }
   .final form p {
     width: 364px;
   }
+}
+footer {
+  flex-direction: row;
+  padding: 30px 25px 30px 25px;
+}
+footer .content-container {
+  display: flex;
+  width: 100%;
+  max-width: 1280px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+  line-height: 180%;
+}
+footer .content-container a {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
