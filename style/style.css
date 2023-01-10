@@ -747,24 +747,28 @@ button {
 
 footer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   padding: 40px 0 43px 0;
 }
-footer p, footer a {
+footer .content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .content-container p, footer .content-container a {
   font-weight: 500;
   font-size: 15px;
 }
-footer a {
-  margin: 23px 0 23px 0;
+footer .content-container a {
+  margin: 16px 0 16px 0;
 }
-footer div {
+footer .content-container div {
   display: flex;
 }
-footer div svg {
+footer .content-container div svg {
   margin-right: 10px;
 }
-footer div p, footer div a {
+footer .content-container div p, footer .content-container div a {
   font-size: 14px;
 }
 
@@ -1904,20 +1908,20 @@ footer div p, footer div a {
   .final form p {
     width: 364px;
   }
-}
-footer {
-  flex-direction: row;
-  padding: 30px 25px 30px 25px;
-}
-footer .content-container {
-  display: flex;
-  width: 100%;
-  max-width: 1280px;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 15px;
-  line-height: 180%;
-}
-footer .content-container a {
-  margin: 0;
+  footer {
+    flex-direction: row;
+    padding: 30px 25px 30px 25px;
+  }
+  footer .content-container {
+    display: flex;
+    width: 100%;
+    max-width: 1280px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    line-height: 180%;
+  }
+  footer .content-container a {
+    margin: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
