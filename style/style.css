@@ -431,7 +431,12 @@ button {
   color: white;
   margin-bottom: 46px;
 }
-.inc-courses .card-container {
+.inc-courses .content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inc-courses .content-container .card-container {
   position: relative;
   width: 312px;
   height: 260px;
@@ -442,10 +447,10 @@ button {
   margin-bottom: 20px;
   z-index: 5;
 }
-.inc-courses .card-container svg {
+.inc-courses .content-container .card-container svg {
   margin-bottom: 15px;
 }
-.inc-courses .card-container p {
+.inc-courses .content-container .card-container p {
   font-weight: 400;
   font-size: 15px;
   line-height: 180%;
@@ -481,21 +486,25 @@ button {
   font-size: 22px;
   margin-bottom: 10px;
 }
-.description p {
+.description .content-container {
+  display: flex;
+  flex-direction: column;
+}
+.description .content-container p {
   font-weight: 400;
   font-size: 15px;
   line-height: 200%;
   margin-bottom: 20px;
 }
-.description p span {
+.description .content-container p span {
   font-weight: 600;
 }
-.description .bold {
+.description .content-container .bold {
   font-weight: 600;
   margin-bottom: 30px;
 }
-.description button {
-  margin-bottom: 40px;
+.description .content-container button {
+  margin: 0 auto 40px auto;
 }
 .description img {
   width: 345px;
@@ -585,30 +594,34 @@ button {
   align-items: center;
   padding: 50px 15px 60px 15px;
 }
-.payment h2 {
+.payment .content-container {
+  display: flex;
+  flex-direction: column;
+}
+.payment .content-container h2 {
   width: 100%;
   font-weight: 700;
   font-size: 22px;
   line-height: 140%;
   margin-bottom: 10px;
 }
-.payment h3 {
+.payment .content-container h3 {
   width: 100%;
   font-weight: 600;
 }
-.payment .styled {
+.payment .content-container .styled {
   color: rgb(69, 119, 252);
   margin-bottom: 20px;
 }
-.payment p, .payment h3 {
+.payment .content-container p, .payment .content-container h3 {
   font-size: 15px;
   line-height: 200%;
 }
-.payment p {
+.payment .content-container p {
   margin-bottom: 30px;
 }
-.payment button {
-  margin-bottom: 40px;
+.payment .content-container button {
+  margin: 0 auto 40px auto;
 }
 .payment img {
   width: 345px;
@@ -666,22 +679,22 @@ button {
   text-align: center;
   position: relative;
 }
-.final h2 {
+.final .content-container h2 {
   font-weight: 700;
   font-size: 22px;
   line-height: 140%;
   margin-bottom: 26px;
 }
-.final p {
+.final .content-container p {
   font-weight: 500;
   font-size: 15px;
   line-height: 200%;
   margin-bottom: 30px;
 }
-.final p:nth-of-type(2) {
+.final .content-container p:nth-of-type(2) {
   margin-bottom: 20px;
 }
-.final .styled {
+.final .content-container .styled {
   display: inline;
   background: #123CAE;
   border-radius: 20px;
@@ -700,7 +713,7 @@ button {
   margin-top: 51px;
   z-index: 5;
 }
-.final form .h3 {
+.final form h3 {
   font-weight: 700;
   font-size: 18px;
   line-height: 135%;
@@ -926,10 +939,10 @@ footer .content-container div p, footer .content-container div a {
   .description {
     padding: 73px 15px 80px 15px;
   }
-  .description h2 {
+  .description .content-container h2 {
     font-size: 24px;
   }
-  .description button {
+  .description .content-container button {
     margin-bottom: 50px;
   }
   .description img {
@@ -1230,25 +1243,25 @@ footer .content-container div p, footer .content-container div a {
   .inc-courses {
     padding: 120px 0;
   }
-  .inc-courses .container {
+  .inc-courses .content-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 642px;
   }
-  .inc-courses .container h2 {
+  .inc-courses .content-container h2 {
     font-size: 35px;
     line-height: 131%;
     text-align: left;
   }
-  .inc-courses .container .big-cube1 {
+  .inc-courses .content-container .big-cube1 {
     width: 100px;
     height: 100px;
     left: 79px;
     top: -50px;
   }
-  .inc-courses .container .big-cube2 {
+  .inc-courses .content-container .big-cube2 {
     width: 115px;
     height: 115px;
     right: 80px;
@@ -1708,11 +1721,11 @@ footer .content-container div p, footer .content-container div a {
     top: 265px;
     left: 200px;
   }
-  .inc-courses .container {
+  .inc-courses .content-container {
     width: 100%;
     max-width: 976px;
   }
-  .inc-courses .container h2 {
+  .inc-courses .content-container h2 {
     display: flex;
     align-items: center;
     width: 312px;
