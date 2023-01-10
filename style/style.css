@@ -959,7 +959,7 @@ footer .content-container div p, footer .content-container div a {
   .payment {
     padding: 50px 15px 60px 15px;
   }
-  .payment h2 {
+  .payment .content-container h2 {
     font-size: 24px;
     margin-bottom: 20px;
   }
@@ -1268,6 +1268,8 @@ footer .content-container div p, footer .content-container div a {
   }
   .description {
     padding: 70px 24px 110px 24px;
+  }
+  .description .content-container {
     align-items: flex-start;
   }
   .description .content-container h2 {
@@ -1327,27 +1329,31 @@ footer .content-container div p, footer .content-container div a {
     flex-wrap: wrap;
     padding: 91px 24px 112px 24px;
   }
-  .payment h2 {
+  .payment .content-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .payment .content-container h2 {
     font-size: 35px;
     margin-bottom: 25px;
     text-align: center;
   }
-  .payment h3, .payment .styled {
+  .payment .content-container h3, .payment .content-container .styled {
     display: flex;
     width: auto;
     margin-bottom: 25px;
   }
-  .payment .styled {
+  .payment .content-container .styled {
     margin-left: 8px;
   }
-  .payment p {
+  .payment .content-container p {
     margin-bottom: 40px;
   }
-  .payment h3, .payment .styled, .payment p {
+  .payment .content-container h3, .payment .content-container .styled, .payment .content-container p {
     font-size: 18px;
     line-height: 200%;
   }
-  .payment button {
+  .payment .content-container button {
     margin: 0 auto 60px auto;
   }
   .payment img {
