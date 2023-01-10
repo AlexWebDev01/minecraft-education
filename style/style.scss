@@ -496,6 +496,10 @@ button {
         transform: rotate(30deg);
     }
 
+    .arrow {
+        display: none;
+    }
+
     .background-image {
         position: absolute;
         width: 100%;
@@ -616,7 +620,6 @@ button {
                 color: #6044BE;
             }
         }
-
     }
 
     .background-image {
@@ -628,6 +631,10 @@ button {
         background: linear-gradient(-93.39deg, rgba(2, 132, 38, 0.9) -17.42%, rgba(26, 48, 38, 0.9) 56.79%, rgba(25, 44, 38, 0.9) 107.21%), url(../images/background2.webp);
         background-blend-mode: multiply;
         z-index: 0;
+    }
+
+    .big-cube1 {
+        display: none;
     }
 }
 
