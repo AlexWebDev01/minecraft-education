@@ -409,6 +409,7 @@ button {
             text-align: center;
     
             img {
+                display: block;
                 width: 305px;
                 height: 317px;
             }
@@ -438,6 +439,10 @@ button {
             margin-bottom: 20px;
         }
     }
+
+    img {
+        display: none;
+    }
 }
 
 .inc-courses {
@@ -447,6 +452,10 @@ button {
     background: $green-section;
     position: relative;
     padding: 90px 31.5px;
+
+    .arrow-container {
+        display: none;
+    }
 
     img {
         position: absolute;
@@ -502,10 +511,6 @@ button {
         width: 120px;
         height: 120px;
         transform: rotate(30deg);
-    }
-
-    .arrow {
-        display: none;
     }
 
     .background-image {
@@ -570,6 +575,10 @@ button {
     padding: 50px 17.5px 70px 17.5px;
     background: $green-section-reversed;
     position: relative;
+
+    .arrow-container {
+        display: none;
+    }
 
     .container {
         display: flex;
@@ -746,6 +755,10 @@ button {
             text-align: left;
         }
     }
+
+    .cube-container {
+        display: none;
+    }
 }
 
 .final {
@@ -853,6 +866,10 @@ button {
         background: linear-gradient(-93.39deg, rgba(2, 132, 38, 0.9) -17.42%, rgba(26, 48, 38, 0.9) 56.79%, rgba(25, 44, 38, 0.9) 107.21%), url('../images/background4.webp');
         background-blend-mode: multiply;
         z-index: 0;
+    }
+
+    .player-image-container {
+        display: none;
     }
 }
 
@@ -2002,7 +2019,7 @@ footer {
                 }
             }
             .card-container:first-of-type, .card-container:nth-of-type(2) {
-                margin-bottom: 25px;
+                margin-bottom: 0;
             }
             .card-container:nth-child(3) {
                 display: flex;
@@ -2025,11 +2042,19 @@ footer {
         padding: 140px 0;
         background: linear-gradient(to left, rgba(2, 132, 38, 0.9) -5.82%, rgba(26, 48, 38, 0.9) 61.56%, rgba(25, 44, 38, 0.9) 107.34%), #D9D9D9;
 
-        .arrow {
+        .arrow-container {
+            display: block;
             position: absolute;
-            z-index: 10;
-            top: 265px;
-            left: 200px;
+
+            .arrow {
+                width: 181.57px;
+                height: 161.97px;
+                display: block;
+                position: relative;
+                z-index: 10;
+                top: 140px;
+                left: -245px;
+            }
         }
 
         .content-container {
@@ -2131,10 +2156,14 @@ footer {
             }
         }
 
-        .big-cube1 { 
+        .big-cube1 {
+            width: 122.77px;
+            height: 122.77px;
+            display: block;
             position: absolute;
             top: -80px;
             left: 164px;
+            transform: rotate(-30deg);
         }
 
         .big-cube2 {
@@ -2142,7 +2171,10 @@ footer {
             left: 763px;
             top: 790px;
             z-index: 10;
-            transform: rotate(30deg);
+            width: 200px;
+            height: 200px;
+            transform: rotate(0deg);
+            filter: blur(1px);
         }
     }
 
@@ -2179,7 +2211,7 @@ footer {
                 line-height: 200%;
             }
             button {
-                margin: 0 auto 60px auto;
+                margin: 0 auto;
             }
         }
 
@@ -2280,11 +2312,11 @@ footer {
     }
 
     footer {
-        flex-direction: row;
         padding: 30px 25px 30px 25px;
     
         .content-container {
             display: flex;
+            flex-direction: row;
             width: 100%;
             max-width: 1280px;
             align-items: center;
@@ -2437,7 +2469,7 @@ footer {
                     width: 221px;
                     height: 273px;
                     top: 65px;
-                    left: 825px;
+                    left: 725px;
                     z-index: 10;
                 }
             }
@@ -2450,20 +2482,15 @@ footer {
     }
 
     .minecraft {
-        padding: 70px 24px 120px 24px;
+        padding: 108px 195px 179px 195px;
 
         h2 {
-            width: 810px;
-            max-width: none;
-            font-size: 35px;
+            width: auto;
         }
 
         .card-container:first-of-type {
-            display: flex;
-            padding-top: 113px;
-            padding-left: 61px;
-            padding-right: 0;
-            margin-bottom: 168px;
+            padding-left: 125px;
+            margin-bottom: 219px;
 
             .content-container {
 
@@ -2485,45 +2512,22 @@ footer {
                     height: 511px;
                     position: relative;
                     top: -23px;
-                    right: 15px;
+                    right: -64px;
                 }
             }
         }
         
         .card-container {
-            max-width: 1530px;
-            width: 100%;
+            width: 1530px;
             height: 600px;
-            padding: 77px 109px 75px 91px;
 
-            .styled {
-                font-size: 30px;
-                line-height: 160%;
-                margin: 0;
-            }
-            h3{
-                font-size: 28px;
-                line-height: 160%;
-                margin-bottom: 25px;
-            }
-            p {
-                font-size: 18px;
-                line-height: 200%;
-            }
             .cube1 {
-                filter:blur(0);
                 width: 85px;
                 height: 85px;
                 top: 25px;
-                left: 620px;
+                left: 1350px;
             }
-            .cube2 {
-                filter: blur(0);
-                width: 120px;
-                height: 120px;
-                left: 35px;
-                top: 538px;
-            }
+
             .cube3 {
                 width: 114px;
                 height: 114px;
@@ -2565,74 +2569,73 @@ footer {
         }
 
         .non-card-container {
-            max-width: 1530px;
+            width: auto;
+            max-width: none;
             width: 100%;
             justify-content: center;
             margin-bottom: 157px;
 
             .character {
                 min-width: 478px;
-                width: 478px;
-                height: 390px;
+                width: 584px;
+                height: 312px;
+                background: url('../images/background-1920.webp');
+                margin-right: 147px;
 
                 img {
-                    width: 365px;
-                    height: 421px;
-                    top: -15px;
+                    top: -42px;
+                    left: 87px;
                 }
             }
+        }
+        
+        .card-container:last-of-type {
+            padding: 122px 0 147px 126px;
 
-            .text {
-                max-width: 520px;
-                width: auto;
-                margin-left: 49px;
+            .content-container {
+                max-width: none;
+                width: 616px;
+                height: auto;
+                margin-right: 66px;
+            }
 
-                h3 {
-                    width: auto;
+            .image-container {
+                
+                .gamepad {
+                    display: block;
+                    top: 0;
+                    left: 0;
                 }
-
             }
         }
     }
 
     .child-description {
-        width: 100%;
-        flex-direction: column;
-        padding: 0 0 160px 0;
-
-        h2 {
-            display: block;
-            font-size: 35px;
-        }
+        padding: 0 0 308px 0;
         
 
         .content-container {
-            flex-direction: row;
-            width: 976px;
+            width: 1280px;
 
             .card-container {
-                width: 229px;
-                height: 347px;
+                width: 305px;
+                height: 438px;
     
                 img {
-                    width: 229px;
-                    height: 238px;
+                    width: 305px;
+                    height: 317px;
                 }
                 p {
-                    font-weight: 600;
-                    font-size: 14px;
-                    line-height: 165%;
-                    margin-top: 20px;
+                    font-size: 16px;
                 }
     
-            }
-            .card-container:last-of-type{
-                p{
-                    margin: 31px 40px 0 40px;
-                }
             }
             .card-container:first-of-type, .card-container:nth-of-type(2) {
                 margin-bottom: 25px;
+
+                p {
+                    margin-top: 31px;
+                }
             }
             .card-container:nth-child(3) {
                 display: flex;
@@ -2643,47 +2646,69 @@ footer {
 
             .card-container:last-of-type {
                 p {
-                    width: 187px;
+                    width: 273px;
                     margin: 20px auto 0 auto;
                 }
             }
            
         }
+
+        .image-container {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            overflow-x: hidden;
+
+            img {
+                display: block;
+                position: relative;
+            }
+
+            .mini-player {
+                top: 0;
+                left: 0px;
+            }
+    
+            .m-icon {
+                top: 170px;
+                left: 1697px;
+            }
+        }
     }
 
     .inc-courses {
-        padding: 140px 0;
+        padding: 189px 0;
         background: linear-gradient(to left, rgba(2, 132, 38, 0.9) -5.82%, rgba(26, 48, 38, 0.9) 61.56%, rgba(25, 44, 38, 0.9) 107.34%), #D9D9D9;
 
-        .arrow {
-            position: absolute;
-            z-index: 10;
-            top: 265px;
-            left: 200px;
-        }
+        .arrow-container {
 
-        .content-container {
-            width: 100%;
-            max-width: 976px;
-
-            h2 {
-                display: flex;
-                align-items: center;
-                width: 312px;
+            .arrow {
+                width: 250px;
+                height: 280px;
+                top: 40px;
+                left: -325px;
             }
         }
 
-        .big-cube1 {
-            width: 100px;
-            height: 100px;
-            left: 179px;
-            top: -50px;
-        }
-        .big-cube2{
-            width: 115px;
-            height: 115px;
-            right: 80px;
+        .content-container {
+            width: 1277px;
+            max-width: none;
 
+            .card-container {
+                width: 407px;
+                height: 260px;
+                box-shadow: -10px 30px 70px #263631;
+                padding: 36px 33px 0 40px;
+            }
+
+            .card-container:nth-of-type(3), .card-container:nth-of-type(4) {
+                padding: 36px 50px 0 40px;
+            }
+
+            h2 {
+                width: 407px;
+                max-width: none;
+            }
         }
     }
 
@@ -2693,8 +2718,7 @@ footer {
         justify-content: center;
 
         .content-container {
-            width: 520px;
-            margin-right: 41px;
+            margin-right: 132px;
 
             h2 {
                 width: 382px;
@@ -2702,52 +2726,37 @@ footer {
                 line-height: 130%;
                 margin: 0 0 25px 0;
             }
-    
-            p:first-of-type{
-                width: auto;
+
+            p {
+                margin-bottom: 30px;
             }
-            p:nth-of-type(2){
-                width: 500px;
-            }
-    
-            .bold {
-                width: auto;
-                margin-bottom: 35px;
-            }
-            
+
             button {
-                margin: 0 auto;
-            }
-        }
-
-        .image-container {
-            width: auto;
-            height: 710px;
-            overflow: hidden;
-            border-radius: 20px;
-
-            img {
-                width: 720px;
-                height: 733px;
-                margin: auto;
+                margin-left: 0;
             }
         }
     }
 
     .lesson-staff {
-        padding: 100px 62px 140px 62px;
+        padding: 108px 0 150px 0;
+
+        .arrow-container {
+            display: block;
+            position: absolute;
+
+            svg {
+                position: relative;
+                top: -110px;
+                left: -112px;
+
+            }
+        }
 
         .container {
-            width: 976px;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            width: 1280px;
 
             h2 {
-                width: 100%;
-                font-size: 35px;
-                margin: 0 auto 75px auto;
+                text-align: left;
             }
             
             .card-container {
@@ -2761,169 +2770,134 @@ footer {
             }
         }
 
-        .big-cube1 { 
-            position: absolute;
-            top: -80px;
-            left: 164px;
+        .big-cube1 {
+            filter: blur(1.5px);
+            top: -85px;
+            left: 1265px;
         }
 
         .big-cube2 {
-            position: absolute;
-            left: 763px;
-            top: 790px;
-            z-index: 10;
-            transform: rotate(30deg);
+            left: 1720px;
+            top: 775px;
         }
     }
 
     .payment {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        padding: 91px 24px 130px 24px;
+        padding: 190px 0;
         
         .content-container {
-            width: 396px;
-            display: flex;
-            flex-direction: column;
-            margin-right: 100px;
+            width: 520px;
+            margin-right: 132px;
 
             h2 {
-                font-size: 35px;
-                margin-bottom: 25px;
-                text-align: center;
+                text-align: left;
             }
-            h3, .styled {
-                display: flex;
-                width: auto;
-                margin-bottom: 25px;
+            h3 {
+                margin-bottom: 0;
             }
             .styled {
-                margin-left: 8px;
+                margin-left: 0;
             }
             p {
-                margin-bottom: 40px;
-            }
-            h3, .styled, p {
-                font-size: 18px;
-                line-height: 200%;
-            }
-            button {
-                margin: 0 auto 60px auto;
+                margin-bottom: 35px;
             }
         }
 
         img {
-            width: 479px;
-            height: 466px;
+            width: 628px;
+            height: 523px;
             margin: 0;
         }
     }
 
     .valuable-skills {
-        padding: 100px 95px 156px 95px;
+        padding: 125px 0 180px 0;
 
         .container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            width: 834px;
+            width: 1280px;
 
             h2 {
-                font-size: 35px;
-                line-height: 130%;
-                margin: 0 auto 25px auto;
+                width: 100%;
             }
 
             p:first-of-type {
-                width: 660px;
-                font-size: 18px;
-                line-height: 180%;
-                margin-bottom: 70px;
+                width: 100%;
+                margin: 0 270px 70px 270px;
+                text-align: center;
             }
 
             .card-container {
-                width: 407px;
-                height: 261px;
-    
-                p {
-                    width: auto;
-                    font-size: 15px;
-                    line-height: 180%;
+
+                p:first-of-type {
+                    margin: 0;
+                    text-align: left;
                 }
-    
             }
 
-            .card-container:nth-of-type(3), .card-container:nth-of-type(4), .card-container:nth-of-type(5), .card-container:nth-of-type(6) {
-                height: 317px;
+            .card-container:nth-of-type(3) {
+                height: 261px;
+            }
+
+            .card-container:nth-of-type(5) {
+                padding-right: 19px;
+            }
+        }
+
+
+        .cube-container {
+            display: block;
+            position: absolute;
+
+            .big-cube1 {
+                width: 184.9px;
+                height: 184.9px;
+                position: relative;
+                top: -215px;
+                left: -330px;
+                transform: rotate(-25deg);
+                filter: blur(1.5px);
+            }
+
+            .big-cube2 {
+                width: 157.37px;
+                height: 157.37px;
+                position: relative;
+                top: 900px;
+                left: 1250px;
+                filter: blur(1.5px);
+                z-index: 10;
             }
         }
     }
 
     .final {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 100px 24px 133px 24px;
+        padding: 142px 0 151px 0;
 
         .content-container {
-            width: 474px;
-            align-items: flex-start;
-            margin-right: 42px;
+            width: 520px;
+            margin-right: 250px;
             z-index: 10;
-
-
-            h2 {
-                margin-bottom: 25px;
-                text-align: start;
-            }
-    
-            p {
-                width: auto;
-                text-align: start;
-            }
-    
-            .styled {
-                width: 474px;
-                margin-bottom: 69px;
-            }
         }
 
-        form {
-            width: 460px;
-            height: 636px;
-            padding: 52px 53px 63px 53px;
-            margin: 0;
+        .player-image-container {
+            display: block;
+            position: absolute;
 
-            h3 {
-                font-weight: 700;
-                font-size: 23px;
-                line-height: 135%;
+            .player-1 {
+                position: relative;
+                width: 275px;
+                height: 486px;
+                left: -610px;
+                top: 353px;
             }
 
-            p {
-                width: 364px;
-            }
-        }
-    }
-
-    footer {
-        flex-direction: row;
-        padding: 30px 25px 30px 25px;
-    
-        .content-container {
-            display: flex;
-            width: 100%;
-            max-width: 1280px;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 15px;
-            line-height: 180%;
-    
-            a {
-                margin: 0;
+            .player-2 {
+                position: relative;
+                width: 392px;
+                height: 484px;
+                top: 343px;
+                left: 620px;
+                z-index: 10;
             }
         }
     }
